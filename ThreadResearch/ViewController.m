@@ -28,7 +28,8 @@
                         @"开始NSThreas",@"NSThreas状态",
                         @"NSThreas cancel",@"GCD serial sync",
                         @"GCD serial async",@"GCD concurrent sync",
-                        @"GCD concurrent async"];
+                        @"GCD concurrent async",@"GCD 栅栏函数",@"GCD after 延迟函数",
+                        @"GCD once 只执行一次",@"GCD 快速迭代",@"GCD group 队列组"];
     
     UITextField *filed = [[UITextField alloc] initWithFrame:CGRectMake(20, 44, 200, 44)];
     filed.backgroundColor = UIColor.grayColor;
@@ -87,6 +88,16 @@
         [gcd concurrent_sync];
     }else if(index == 8){
         [gcd concurreng_async];
+    }else if(index == 9){
+        [gcd barrier];
+    }else if(index == 10){
+        [gcd after];
+    }else if(index == 11){
+        [gcd once];
+    }else if(index == 12){
+        [gcd apply];
+    }else if(index == 13){
+        [gcd group];
     }
 }
 @end

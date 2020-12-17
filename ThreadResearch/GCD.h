@@ -25,6 +25,18 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)concurrent_sync;
 //异步
 -(void)concurreng_async;
+
+
+//栅栏函数
+-(void)barrier;
+//延迟
+-(void)after;
+//执行一次的函数
+-(void)once;
+//快速迭代：开启多条线程，并发执行，相比于for循环在耗时操作中极大的提高效率和速度
+-(void)apply;
+//队列组（同栅栏函数）
+-(void)group;
 @end
 
 NS_ASSUME_NONNULL_END
