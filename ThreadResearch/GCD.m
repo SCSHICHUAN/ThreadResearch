@@ -148,6 +148,7 @@
 //执行一次的函数
 -(void)once;
 {
+    //onceToken用来记录该部分的代码是否被执行过
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         NSLog(@"我只执行一次");

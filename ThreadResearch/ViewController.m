@@ -9,11 +9,13 @@
 #import "P_thread.h"
 #import "NSThread_loc.h"
 #import "GCD.h"
+#import "NSOperation_loc.h"
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     P_thread *p;
     NSThread_loc *nsthread;
     GCD *gcd;
+    NSOperation_loc *operation;
 }
 @property UITableView *table;
 @property NSArray *titleArray;
@@ -29,7 +31,8 @@
                         @"NSThreas cancel",@"GCD serial sync",
                         @"GCD serial async",@"GCD concurrent sync",
                         @"GCD concurrent async",@"GCD 栅栏函数",@"GCD after 延迟函数",
-                        @"GCD once 只执行一次",@"GCD 快速迭代",@"GCD group 队列组"];
+                        @"GCD once 只执行一次",@"GCD 快速迭代",@"GCD group 队列组",@"operation invocation start",
+    @"operation invocation cancel_loc",@"operation operation invocation cancel_loc_3"];
     
     UITextField *filed = [[UITextField alloc] initWithFrame:CGRectMake(20, 44, 200, 44)];
     filed.backgroundColor = UIColor.grayColor;
@@ -48,6 +51,9 @@
     
     
     gcd = [[GCD alloc] init];
+    
+    operation = [[NSOperation_loc alloc] init];
+    
 }
 #pragma mark-UITableViewDelegate,UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
@@ -98,6 +104,12 @@
         [gcd apply];
     }else if(index == 13){
         [gcd group];
+    }else if(index == 14){
+        [operation invocation];
+    }else if(index == 15){
+        [operation cancel_loc];
+    }else if(index == 16){
+        [operation cancel_loc_3];
     }
 }
 @end
