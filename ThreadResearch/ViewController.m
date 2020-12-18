@@ -10,6 +10,7 @@
 #import "NSThread_loc.h"
 #import "GCD.h"
 #import "NSOperation_loc.h"
+#import "SCOperation.h"
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     P_thread *p;
@@ -32,7 +33,8 @@
                         @"GCD serial async",@"GCD concurrent sync",
                         @"GCD concurrent async",@"GCD 栅栏函数",@"GCD after 延迟函数",
                         @"GCD once 只执行一次",@"GCD 快速迭代",@"GCD group 队列组",@"operation invocation start",
-    @"operation invocation cancel_loc",@"operation operation invocation cancel_loc_3"];
+    @"operation invocation cancel_loc",@"operation operation invocation cancel_loc_3",
+    @"operation block sync",@"opercation block async",@"SCOpercation mainQueue",@"SCOpercation creat thread"];
     
     UITextField *filed = [[UITextField alloc] initWithFrame:CGRectMake(20, 44, 200, 44)];
     filed.backgroundColor = UIColor.grayColor;
@@ -53,6 +55,7 @@
     gcd = [[GCD alloc] init];
     
     operation = [[NSOperation_loc alloc] init];
+    
     
 }
 #pragma mark-UITableViewDelegate,UITableViewDataSource
@@ -110,6 +113,21 @@
         [operation cancel_loc];
     }else if(index == 16){
         [operation cancel_loc_3];
+    }else if(index == 17){
+        [operation sync_operation];
+    }else if(index == 18){
+        [operation async_operation];
+    }else if(index == 19){
+        SCOperation *scoperation = [[SCOperation alloc] init];
+        [scoperation start];
+    }else if(index == 20){
+        SCOperation *scoperation = [[SCOperation alloc] init];
+        NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+        [queue addOperation:scoperation];
+        //监听一个任务完成
+        scoperation.completionBlock = ^{
+            NSLog(@"sc opercation well done!");
+        };
     }
 }
 @end

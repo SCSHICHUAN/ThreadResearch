@@ -104,6 +104,12 @@
     dispatch_async(concurrent, ^{
         NSLog(@"block 6 %@",[NSThread currentThread]);
     });
+    
+    
+    //回到主线程刷新UI
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSLog(@"%@--刷新UI",[NSThread currentThread]);
+    });
 }
 
 

@@ -16,6 +16,7 @@
 		F60F4A982521DF7C00ACB70B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F60F4A972521DF7C00ACB70B /* main.m */; };
 		F60F4AA42521E0B800ACB70B /* P_thread.m in Sources */ = {isa = PBXBuildFile; fileRef = F60F4AA32521E0B800ACB70B /* P_thread.m */; };
 		F655CB93258C755300FFD4DC /* NSOperation_loc.m in Sources */ = {isa = PBXBuildFile; fileRef = F655CB92258C755300FFD4DC /* NSOperation_loc.m */; };
+		F655CB97258C99FB00FFD4DC /* SCOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F655CB96258C99FB00FFD4DC /* SCOperation.m */; };
 		F6906A78258B243F002D90B3 /* NSThread_loc.m in Sources */ = {isa = PBXBuildFile; fileRef = F6906A77258B243F002D90B3 /* NSThread_loc.m */; };
 		F6906A7C258B39EE002D90B3 /* GCD.m in Sources */ = {isa = PBXBuildFile; fileRef = F6906A7B258B39EE002D90B3 /* GCD.m */; };
 /* End PBXBuildFile section */
@@ -37,6 +38,8 @@
 		F60F4AA32521E0B800ACB70B /* P_thread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = P_thread.m; sourceTree = "<group>"; };
 		F655CB91258C755300FFD4DC /* NSOperation_loc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSOperation_loc.h; sourceTree = "<group>"; };
 		F655CB92258C755300FFD4DC /* NSOperation_loc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSOperation_loc.m; sourceTree = "<group>"; };
+		F655CB95258C99FB00FFD4DC /* SCOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCOperation.h; sourceTree = "<group>"; };
+		F655CB96258C99FB00FFD4DC /* SCOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCOperation.m; sourceTree = "<group>"; };
 		F6906A76258B243F002D90B3 /* NSThread_loc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSThread_loc.h; sourceTree = "<group>"; };
 		F6906A77258B243F002D90B3 /* NSThread_loc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSThread_loc.m; sourceTree = "<group>"; };
 		F6906A7A258B39EE002D90B3 /* GCD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCD.h; sourceTree = "<group>"; };
@@ -84,6 +87,8 @@
 				F6906A7B258B39EE002D90B3 /* GCD.m */,
 				F655CB91258C755300FFD4DC /* NSOperation_loc.h */,
 				F655CB92258C755300FFD4DC /* NSOperation_loc.m */,
+				F655CB95258C99FB00FFD4DC /* SCOperation.h */,
+				F655CB96258C99FB00FFD4DC /* SCOperation.m */,
 			);
 			path = ThreadResearch;
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F60F4A8D2521DF7C00ACB70B /* ViewController.m in Sources */,
+				F655CB97258C99FB00FFD4DC /* SCOperation.m in Sources */,
 				F60F4AA42521E0B800ACB70B /* P_thread.m in Sources */,
 				F6906A7C258B39EE002D90B3 /* GCD.m in Sources */,
 				F655CB93258C755300FFD4DC /* NSOperation_loc.m in Sources */,

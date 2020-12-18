@@ -13,6 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)invocation;
 -(void)cancel_loc;
 -(void)cancel_loc_3;
+
+-(void)sync_operation;
+-(void)async_operation;
 @end
 
 NS_ASSUME_NONNULL_END
