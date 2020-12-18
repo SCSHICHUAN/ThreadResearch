@@ -22,6 +22,18 @@
 @property NSArray *titleArray;
 @end
 
+
+/*
+ dispatch_queut_t
+ 串行 并行 concurrent sercal
+ 同步 异步 sync async
+ 
+ NSoperation
+ 串行 并行 addDependency 或者 maxConcurrentOPerationCount 来控制
+ 同步 异步 NSOperationQueue 控制
+ */
+
+
 @implementation ViewController
 
 - (void)viewDidLoad {
